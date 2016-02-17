@@ -22,6 +22,7 @@ def run_lda():
     topic_assignments = pd.DataFrame(model.doc_topic_)
     topic_assignments.to_csv('topic_weights.csv', index = False)
 
+    topic_word = model.topic_word_
     with open('top_words.txt', 'w') as f:         
         for i, topic_dist in enumerate(topic_word):
             topic_words = np.array(vocab)[np.argsort(topic_dist)][:-(n_top_words+1):-1]
