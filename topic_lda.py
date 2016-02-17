@@ -23,9 +23,3 @@ def run_lda():
 
 if __name__ == '__main__':
     run_lda()
-
-# topic_word = model.topic_word_  # model.components_ also works
-# n_top_words = 35
-# for i, topic_dist in enumerate(topic_word):
-#     topic_words = np.array(vocab)[np.argsort(topic_dist)][:-(n_top_words+1):-1]
-#     print('Topic {}: {}'.format(i, ' '.join(topic_words)))
