@@ -26,7 +26,7 @@ gD <- simplify(graph.data.frame(data, directed=TRUE))
 #qplot(degAll)
 
 #..subset graph to only contain papers with N-degrees of connections 
-bad_vs <- V(gD)[degree(gD) < 50] #identify those vertices part of less than 10 edges
+bad_vs <- V(gD)[degree(gD) < 50] #identify those vertices part of less than 50 edges
 gD <- delete.vertices(gD, bad_vs) 
 
 vs <- V(gD)
